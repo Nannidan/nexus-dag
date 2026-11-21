@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #070b12;
+  --surface: #0f1623;
+  --surface-alt: #162032;
+  --ink: #f1f5f9;
+  --muted: #94a3b8;
+  --border: #1e293b;
+  --accent: #38bdf8;
+}
+
+html,
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dag-grid-bg {
+  background-color: #070b12;
+  background-image:
+    radial-gradient(rgba(148, 163, 184, 0.16) 1px, transparent 1px),
+    linear-gradient(to right, rgba(30, 41, 59, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 41, 59, 0.35) 1px, transparent 1px);
+  background-size: 24px 24px, 120px 120px, 120px 120px;
+}
+
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+.wire-animated {
+  stroke-dasharray: 8 6;
+  animation: dash-flow 0.65s linear infinite;
+}
